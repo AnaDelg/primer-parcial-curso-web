@@ -1,5 +1,5 @@
 <?php 
-	$base_url = "http://{$_SERVER['SERVER_NAME']}/dashboard/formulario/";
+	$base_url = "http://ana.postresde.com/primer-parcial-curso-web-master/";
 ?>
 <!DOCTYPE html>
 <html lang="en">

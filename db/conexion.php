@@ -1,7 +1,7 @@
 <?php
-	$servidor = "localhost";
-	$usuario = "root";
-	$password = "";
+	$servidor = "web506.webfaction.com";
+	$usuario = "ana";
+	$password = "primerparcial";
 	$bd = "contacto";
 
 	//conexion a la base de datos
