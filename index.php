@@ -1,111 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Contact V1</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
-</head>
-<body>
+<?php include('header.php'); ?>
+<style type="text/css">	
+	* {
+		margin:0px;
+		padding:0px;
+	}
 
-	<div class="contact1">
-		<div class="container-contact1">
-			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="images/img-01.png" alt="IMG">
-			</div>
+	#header {
+		margin:auto;
+		width:500px;
+		font-family:Arial, Helvetica, sans-serif;
+	}
 
+	ul, ol {
+		list-style:none;
+	}
 
-			<!-- Este es su formulario damas y caballeros -->
+	.nav > li {
+		float:left;
+	}
 
-			<form class="contact1-form validate-form" action="conexion.php" method="POST">
-				<span class="contact1-form-title">
-					Registrarse
-				</span>
+	.nav li a {
+		background-color:#57b846;
+		color:#fff;
+		text-decoration:none;
+		padding:10px 12px;
+		display:block;
 
-				<div class="wrap-input1 validate-input" data-validate = "Nombre es necesario">
-					<input class="input1" type="text" name="nombre" placeholder="Nombre">
-					<span class="shadow-input1"></span>
-				</div>
+		min-width: 93px;
+		height: 50px;
+		border-radius: 25px;
+		font-family: Montserrat-Bold;
+		font-size: 15px;
+		line-height: 1.5;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 25px;
+	}
 
-				<div class="wrap-input1 validate-input" data-validate = "Nombre de usuario">
-					<input class="input1" type="text" name="nombreUsuario" placeholder="Nombre de usuario">
-					<span class="shadow-input1"></span>
-				</div>
+	.nav li a:hover {
+		background-color:#434343;
+	}
 
-				<div class="wrap-input1 validate-input" data-validate = "Contrasena">
-					<input class="input1" type="text" name="contrasena" placeholder="Contrasena">
-					<span class="shadow-input1"></span>
-				</div>
+	.nav li ul {
+		display:none;
+		position:absolute;
+		min-width:140px;
+	}
 
-				<div class="wrap-input1 validate-input" data-validate = "Coloque un email correcto">
-					<input class="input1" type="text" name="email" placeholder="Email">
-					<span class="shadow-input1"></span>
-				</div>
+	.nav li:hover > ul {
+		display:block;
+	}
 
-				<div class="wrap-input1 validate-input" data-validate = "Posicion de trabajo requerido">
-					<input class="input1" type="text" name="posicion" placeholder="Posicion de trabajo requerido">
-					<span class="shadow-input1"></span>
-				</div>
-				
-				
+	.nav li ul li {
+		position:top;
+	}
 
-				<div class="container-contact1-form-btn">
-					<button class="contact1-form-btn" type="submit" >
-						<span>
-							Registrar
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-					</button>
-				</div>
-			</form>
+	.nav li ul li ul {
+		right:-140px;
+		top:0px;
+	}
+
+</style>
+
+<div class="contact1">
+	<div class="container-contact1">
+		<div class="contact1-pic js-tilt" data-tilt>
+			<img src="images/img-01.png" alt="IMG">
 		</div>
+
+		<div id="header">
+		<ul class="nav">
+			<li><a href="index.php">Inicio</a></li>
+			<li><a href="estudiantes">Estudiantes</a>
+				<ul>
+					<li><a href="estudiantes/add.php">Agregar</a></li>
+				</ul>
+			</li>
+			<li><a href="profesores">Profesores</a>
+				<ul>
+				<li><a href="profesores/add.php">Agregar</a></li>
+				</ul>
+			</li>
+			<li><a href="usuario">Usuarios</a>
+				<ul>
+				<li><a href="usuario/add.php">Agregar</a></li>
+				</ul>
+			</li>
+		</ul>
 	</div>
 
-
-
-
-<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
-</body>
-</html>
+						
+	</div>
+</div>
+<?php include('footer.php'); ?>
